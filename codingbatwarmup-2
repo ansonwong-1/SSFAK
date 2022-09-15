@@ -55,3 +55,20 @@ def array123(nums):
       return True
   return False
   
+def string_match(a, b):
+  greater = ""
+  less = ""
+  count = 0
+  if (len(a) < len(b)):
+    greater = b
+    less = a
+    
+  else:
+    greater = a
+    less = b
+  for i in range(len(less) - 1):
+    if (less[i:i+2] == greater[i:i+2]):
+      count+=1
+      
+  return count
+  
